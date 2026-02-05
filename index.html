@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Valentine</title>
+    <style>
+        body {
+            background-color: #ffe6e6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+        }
+        .container {
+            background-color: white;
+            padding: 50px;
+            border-radius: 25px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #d63384;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #555;
+            font-size: 1.2em;
+        }
+        .buttons {
+            margin-top: 30px;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            margin: 0 15px;
+            transition: transform 0.2s;
+        }
+        #yesBtn {
+            background-color: #ff4d6d;
+            color: white;
+        }
+        #noBtn {
+            background-color: #adb5bd;
+            color: white;
+        }
+        button:hover {
+            transform: scale(1.1);
+        }
+        .hidden {
+            display: none;
+        }
+        #message {
+            margin-top: 20px;
+            font-size: 1.5em;
+            color: #d63384;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Cute GIF - You can replace this link -->
+        <img src="kathan.JPG" alt="Cute Bear" width="200">
+        
+        <h1>Will you be my Valentine, <br> Bachha ❤️</h1>
+        <p>I love you to the moon and back!</p>
+        
+        <div class="buttons">
+            <button id="yesBtn" onclick="accept()">Yes! 💖</button>
+            <button id="noBtn" onclick="denied()">No</button>
+        </div>
+        
+        <p id="message" class="hidden"></p>
+    </div>
+
+    <script>
+        function accept() {
+            document.getElementById('message').innerText = "Yay! You made me the happiest! 🥰💖";
+            document.getElementById('message').classList.remove('hidden');
+            document.getElementById('yesBtn').style.backgroundColor = "#28a745";
+        }
+        
+        function denied() {
+            document.getElementById('message').innerText = "Are you sure? Try clicking the other one! 🥺";
+            document.getElementById('message').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
